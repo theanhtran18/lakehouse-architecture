@@ -31,6 +31,7 @@ cd lakehouse-architecture
 ### 2. Chạy MinIO
 
 ```bash
+cd minIO
 docker compose up -d
 or
 docker-compose up -d
