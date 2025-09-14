@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  spark-master:
+    image: bitnami/spark:3.3
+    container_name: spark-master
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+    ports:
+      - "8080:8080" # Spark master UI
+      - "7077:7077" # Spark master port
+    volumes:
+      - ./app:/opt/bitnami/spark/app
+    networks:
+      - spark-net
+
+  spark-worker:
+    image: bitnami/spark:3.3
+    container_name: spark-worker
+    hostname: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_PORT=7078
+      - SPARK_WORKER_WEBUI_PORT=8081
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081" # Worker UI
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    external: true

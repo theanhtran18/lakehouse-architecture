@@ -14,3 +14,9 @@ services:
       - ./minio/data:/data
       - ./minio/config:/root/.minio
     command: server /data --console-address ":9001"
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    external: true
