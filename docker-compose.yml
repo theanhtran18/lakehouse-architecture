@@ -1,9 +1,9 @@
-version: "3.7"
+version: "3.9"
 
 services:
   spark-master:
-    image: bitnami/spark:3.5
-    container_name: spark-master
+    image: bitnami/spark:3.3
+    container_name: spark-master-v1
     hostname: spark-master
     environment:
       - SPARK_MODE=master
@@ -14,13 +14,13 @@ services:
       - "8080:8080" # Spark master UI
       - "7077:7077" # Spark master port
     volumes:
-      - ./app:/opt/bitnami/spark/app
+      - ./app:/app
     networks:
       - spark-net
 
   spark-worker:
-    image: bitnami/spark:3.5
-    container_name: spark-worker
+    image: bitnami/spark:3.3
+    container_name: spark-worker-v1
     hostname: spark-worker
     environment:
       - SPARK_MODE=worker
@@ -33,9 +33,28 @@ services:
       - spark-master
     ports:
       - "8081:8081" # Worker UI
+      - "7078:7078" # Worker port (optional, useful if connect from outside)
+    volumes:
+      - ./app:/app
+    networks:
+      - spark-net
+
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio-v1
+    ports:
+      - "9000:9000" # API
+      - "9001:9001" # Console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - ./minio/data:/data
+      - ./minio/config:/root/.minio
+    command: server /data --console-address ":9001"
     networks:
       - spark-net
 
 networks:
   spark-net:
-    external: true
+    driver: bridge

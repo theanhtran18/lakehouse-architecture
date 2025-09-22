@@ -28,17 +28,9 @@ git clone https://github.com/theanhtran18/lakehouse-architecture.git
 cd lakehouse-architecture
 ```
 
-Tạo network (để MinIO và Spark chung network)
+### 2. Chạy docker
 
 ```bash
-docker network create spark-net
-
-```
-
-### 2. Chạy MinIO
-
-```bash
-cd minIO
 docker compose up -d
 or
 docker-compose up -d
@@ -56,18 +48,13 @@ API Endpoint (S3): http://localhost:9000
 
 ### 3. Chạy spark
 
-```bash
-cd ..
-docker compose -f docker-compose.spark.yml up -d
-```
-
 Spark Master UI: http://localhost:8080
 
 ### 4. Test kết nối
 
 ```bash
-docker exec -it spark-master /bin/bash
-spark-submit --master spark://spark-master:7077 /opt/bitnami/spark/read_data_from_miniIO.py
+docker exec -it spark-master_v1 /bin/bash
+spark-submit --master spark://spark-master:7077 /app/read_data_from_minIO.py
 ```
 
 ---
@@ -135,23 +122,4 @@ docker cp <container_name>:/path/to/file /host/path
 
 # Copy file từ host vào container
 docker cp /host/path <container_name>:/path/to/file
-```
-
-### Network Management
-
-```bash
-# Xem tất cả network
-docker network ls
-
-# Tạo network
-docker network create <network_name>
-
-# Xóa network
-docker network rm <network_name>
-
-# Kết nối container vào network
-docker network connect <network_name> <container_name>
-
-# Ngắt kết nối
-docker network disconnect <network_name> <container_name>
 ```
