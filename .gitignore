@@ -1,2 +1,6 @@
-# data in minIO
+# ===== LAKEHOUSE PROJECT GITIGNORE =====
+
+# MinIO Data Storage
 minio/
+**/minio/data/
+**/minio/config/
