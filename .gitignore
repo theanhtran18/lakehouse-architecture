@@ -4,3 +4,6 @@
 minio/
 **/minio/data/
 **/minio/config/
+
+# id crawled
+app/list_ids.txt
