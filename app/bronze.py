@@ -49,12 +49,15 @@ def ensure_bucket(bucket_name):
 
 def load_seen_ids():
     if not os.path.exists(SEEN_FILE):
+        open(SEEN_FILE, "w").close()
         return set()
     with open(SEEN_FILE, "r") as f:
         return set(line.strip() for line in f if line.strip())
 
 
 def save_seen_ids(new_ids):
+    if not os.path.exists(SEEN_FILE):
+        open(SEEN_FILE, "w").close()
     with open(SEEN_FILE, "a") as f:
         for i in new_ids:
             f.write(str(i) + "\n")
