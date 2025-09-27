@@ -12,12 +12,9 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Đọc dữ liệu từ MinIO bucket
-df = spark.read.option("header", "true").csv("s3a://test/vietnam_housing_dataset.csv")
+df = spark.read.parquet("s3a://lakehouse/silver/date=2025-09-28/crawl_cleaned_20250928_001034.parquet")
 
 print("===== DataFrame preview =====")
 df.show()
-
-# Ghi kết quả lại vào MinIO dưới dạng Parquet
-df.write.mode("overwrite").parquet("s3a://test/output_parquet")
 
 spark.stop()
