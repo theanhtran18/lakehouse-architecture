@@ -1,0 +1,18 @@
+[2025-10-03T16:51:35.008+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_dag.say_hello manual__2025-10-03T16:51:30.664076+00:00 [queued]>
+[2025-10-03T16:51:35.013+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_dag.say_hello manual__2025-10-03T16:51:30.664076+00:00 [queued]>
+[2025-10-03T16:51:35.013+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-10-03T16:51:35.023+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): say_hello> on 2025-10-03 16:51:30.664076+00:00
+[2025-10-03T16:51:35.026+0000] {standard_task_runner.py:57} INFO - Started process 107 to run task
+[2025-10-03T16:51:35.027+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'test_dag', 'say_hello', 'manual__2025-10-03T16:51:30.664076+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmpy8pokudc']
+[2025-10-03T16:51:35.028+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask say_hello
+[2025-10-03T16:51:35.039+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.9/site-packages/***/settings.py:193 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-03T16:51:35.056+0000] {task_command.py:416} INFO - Running <TaskInstance: test_dag.say_hello manual__2025-10-03T16:51:30.664076+00:00 [running]> on host bfc336220e71
+[2025-10-03T16:51:35.100+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_dag' AIRFLOW_CTX_TASK_ID='say_hello' AIRFLOW_CTX_EXECUTION_DATE='2025-10-03T16:51:30.664076+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-03T16:51:30.664076+00:00'
+[2025-10-03T16:51:35.100+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-03T16:51:35.101+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'Hello Airflow!'"]
+[2025-10-03T16:51:35.105+0000] {subprocess.py:86} INFO - Output:
+[2025-10-03T16:51:35.106+0000] {subprocess.py:93} INFO - Hello Airflow!
+[2025-10-03T16:51:35.106+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-03T16:51:35.121+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test_dag, task_id=say_hello, execution_date=20251003T165130, start_date=20251003T165135, end_date=20251003T165135
+[2025-10-03T16:51:35.159+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-03T16:51:35.168+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

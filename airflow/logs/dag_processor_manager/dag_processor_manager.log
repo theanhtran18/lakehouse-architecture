@@ -1,0 +1,97 @@
+[2025-10-03T16:50:21.176+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-10-03T16:50:21.176+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-10-03T16:50:21.176+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-10-03T16:50:21.176+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-10-03T16:50:21.178+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-10-03T16:50:21.240+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/realestate_pipeline.py     84  0.02s             0           0
+/opt/airflow/dags/test_dag.py                83  0.03s             0           0
+================================================================================
+[2025-10-03T16:50:44.377+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-10-03T16:50:50.069+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-10-03T16:50:50.069+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-10-03T16:50:50.069+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-10-03T16:50:50.069+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-10-03T16:50:50.070+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-10-03T16:50:52.166+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-10-03T16:50:52.166+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-10-03T16:50:52.167+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-10-03T16:50:52.167+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-10-03T16:50:52.168+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-10-03T16:50:52.215+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/realestate_pipeline.py     48  0.01s             0           0
+/opt/airflow/dags/test_dag.py                47  0.02s             0           0
+================================================================================
+[2025-10-03T16:51:22.359+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.22s           2025-10-03T16:50:53
+/opt/airflow/dags/test_dag.py                64  0.00s             1           0  0.07s           2025-10-03T16:50:52
+================================================================================
+[2025-10-03T16:51:52.543+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.14s           2025-10-03T16:51:24
+/opt/airflow/dags/test_dag.py               109  0.01s             1           0  0.06s           2025-10-03T16:51:22
+================================================================================
+[2025-10-03T16:52:22.718+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.04s           2025-10-03T16:51:55
+/opt/airflow/dags/test_dag.py               126  0.00s             1           0  0.06s           2025-10-03T16:51:52
+================================================================================
+[2025-10-03T16:52:52.905+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.12s           2025-10-03T16:52:26
+/opt/airflow/dags/test_dag.py               143  0.01s             1           0  0.07s           2025-10-03T16:52:22
+================================================================================
+[2025-10-03T16:53:23.099+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.17s           2025-10-03T16:52:58
+/opt/airflow/dags/test_dag.py               160  0.01s             1           0  0.09s           2025-10-03T16:52:52
+================================================================================
+[2025-10-03T16:53:53.320+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.34s           2025-10-03T16:53:29
+/opt/airflow/dags/test_dag.py               177  0.01s             1           0  0.09s           2025-10-03T16:53:23
+================================================================================
+[2025-10-03T16:54:23.509+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/realestate_pipeline.py                           1           0  1.16s           2025-10-03T16:54:01
+/opt/airflow/dags/test_dag.py               194  0.00s             1           0  0.07s           2025-10-03T16:53:53
+================================================================================

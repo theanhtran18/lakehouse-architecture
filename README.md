@@ -56,3 +56,16 @@ Spark Master UI: http://localhost:8080
 docker exec -it spark-master_v1 bash
 spark-submit read_data_from_minIO.py
 ```
+
+### 5. Tạo tk airflow
+
+```bash
+docker compose run --rm airflow-webserver airflow users create \
+  --username admin \
+  --password admin \
+  --firstname Airflow \
+  --lastname Admin \
+  --role Admin \
+  --email admin@example.com
+
+```
